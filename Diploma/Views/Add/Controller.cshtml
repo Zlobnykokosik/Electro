@@ -1,0 +1,23 @@
+@using Diploma.Models.Add
+@model ControllersAdd
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="CreateController" asp-controller="Add" method="post">
+                <div class="inputs">
+                    <label for="nom-control">Номер контроллера</label>
+                    <input type="number" id="nom-control"  min="1" required asp-for="ContollerNum" />
+                </div>
+                <div class="inputs">
+                    <label for="fio">ФИО</label>
+                    <input type="text" id="fio"  required asp-for="FIO" />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+</body>

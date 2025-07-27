@@ -1,0 +1,32 @@
+@model Diploma.Models.ViewModels.Add.MountTransformerAddView
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="SetTrasnformer" asp-controller="Add">
+                <div class="inputs">
+                    <label for="SelectedPointId">Номер точки</label>
+                    <select required asp-for="SelectedPointId" class="select-css" asp-items="Model.Points">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="SelectedTransformerId">Номер трансформатора</label>
+                    <select required asp-for="SelectedTransformerId" class="select-css" asp-items="Model.Transformers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="set-date">Дата заключения</label>
+                    <input type="date" id="set-date" required asp-for="SetDate" />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Добавить трансформатор</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+

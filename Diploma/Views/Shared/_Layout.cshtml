@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Diploma</title>
+    <script type="importmap"></script>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+</head>
+<body>
+    <form>
+        <header>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="#">Администрирование</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="" asp-action="">Обслуживание пользователей</a></li>
+                            <li><a asp-controller="Add" asp-action="Controller">Задать номер контроллеру</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Создание</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Add" asp-action="Contract">Новый договор</a></li>
+                            <li><a asp-controller="Add" asp-action="Abonent">Новый абонент</a></li>
+                            <li><a asp-controller="Add" asp-action="Point">Новая точка учета</a></li>
+                            <li><a asp-controller="Add" asp-action="PointBind">Связать точки учета</a></li>
+                            <li><a asp-controller="Add" asp-action="Meter">Новый счетчик</a></li>
+                            <li><a asp-controller="Add" asp-action="MountMeter">Установить счетчик</a></li>
+                            <li><a asp-controller="Add" asp-action="MountTransformer">Установить трансформатор</a></li>
+                            <li><a asp-controller="Add" asp-action="Unit">Новая учетная единица</a></li>
+                            <li><a asp-controller="Add" asp-action="Transformer">Новый транформатор</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Редактирование</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Check" asp-action="Contract">Договора</a></li>
+                            <li><a asp-controller="Check" asp-action="Abonent">Абоненты</a></li>
+                            <li><a asp-controller="Check" asp-action="Point">Точки учета</a></li>
+                            <li><a asp-controller="Check" asp-action="Meter">Счетчики</a></li>
+                            <li><a asp-controller="Check" asp-action="Unit">Учетные единицы</a></li>
+                            <li><a asp-controller="Check" asp-action="Transformer">Транформаторы</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Архив</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Arhive" asp-action="ToArhive">Закрыть объект</a></li>
+                            <li><a asp-controller="Arhive" asp-action="FromArhive">Открыть объект</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Удаление</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Delete" asp-action="Delete">Удалить объект</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Расчет</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Calc" asp-action="Contract">Указанных договоров</a></li>
+                            <li><a asp-controller="Calc" asp-action="Contract">Всех измененных</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Показания</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Add" asp-action="Reading">Ввод показаний</a></li>
+                            <li><a asp-controller="Add" asp-action="Consumption">Ввод расхода по точке</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Сводка</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="" asp-action="">Общая таблица</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="exit">
+                    <button class="button-17 ">Войти</button>
+                </div>
+
+            </nav>
+        </header>
+    </form>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

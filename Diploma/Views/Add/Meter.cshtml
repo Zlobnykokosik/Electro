@@ -1,0 +1,31 @@
+@model Diploma.Models.Add.MeterAdd
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="CreateMeter" asp-controller="Add">
+                <div class="inputs">
+                    <label for="nom-meter">Номер счетчика</label>
+                    <input type="text" id="nom-dog" required asp-for="Number" />
+                </div>
+                <div class="inputs">
+                    <label for="commissioning-date">Дата ввода в эксплуатацию</label>
+                    <input type="date" id="commissioning-date" required asp-for="СommissioningDate" />
+                </div>
+                <div class="inputs">
+                    <label for="type-meter">Вид счетчика</label>
+                    <select id="type-meter" required class="select-css" asp-for="Active">
+                        <option value="true">Активный</option>
+                        <option value="false">Реактивный</option>
+                    </select>
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Добавить счетчик</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+

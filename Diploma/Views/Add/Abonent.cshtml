@@ -1,0 +1,43 @@
+
+@model Diploma.Models.ViewModels.Add.AbonentAddView
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="CreateAbonent" asp-controller="Add" method="post">
+                <div class="inputs">
+                    <label for="SelectedContractId">Номер договора</label>
+                    <select required asp-for="SelectedContractId" class="select-css" asp-items="Model.ContractNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="SelectedControllertId">Номер контроллера</label>
+                    <select required asp-for="SelectedControllertId" class="select-css" asp-items="Model.ControllersNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="nom-abn">Номер абонента</label>
+                    <input type="number" id="nom-abn" min="1" required asp-for="AbonentNumber" />
+                </div>
+                <div class="inputs">
+                    <label for="organization-name">Наименование абонента</label>
+                    <input type="text" id="organization-name"  required asp-for="Name" />
+                </div>
+                <div class="inputs">
+                    <label for="conclusion-date">Дата заключения</label>
+                    <input type="date" id="conclusion-date"  required asp-for="ConclusionDate" />
+                </div>
+                <div class="inputs">
+                    <label for="adress-abn">Адрес абонента</label>
+                    <input type="text" id="adress-abn"  required asp-for="Address" />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Добавить абонент</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+</body>

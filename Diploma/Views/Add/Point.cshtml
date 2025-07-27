@@ -1,0 +1,48 @@
+@model Diploma.Models.ViewModels.Add.PointAddView
+<main>
+    <div class="input-container">
+        <form asp-action="CreatePoint" asp-controller="Add">
+            <div class="inputs">
+                <label for="tu-num">Номер точки</label>
+                <input type="text" id="tu-num" asp-for="PointNumber" required />
+            </div>
+            <div class="inputs">
+                <label for="SelectedContractId">Номер договора</label>
+                <select required asp-for="SelectedContractId" class="select-css" asp-items="Model.ContractNumbers">
+                    <option value="">Выберите номер</option>
+                </select>
+            </div>
+            <div class="inputs" id="secondListContainer">
+                <label for="SelectedAbonentId">Номер абонента</label>
+                <select required asp-for="SelectedAbonentId" class="select-css" asp-items="Model.AbonentNumbers">
+                    <option value="">Выберите номер</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="location">Тип точки</label>
+                <select id="location" required class="select-css" asp-for="Version">
+                    <option value="Calc">Расчетная</option>
+                    <option value="Control">Контрольная</option>
+                    <option value="Tech">Тех учет</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="get-reading-type">Тип расчета</label>
+                <select id="get-reading-type" required class="select-css" asp-for="Type">
+                    <option value="CalcStatic">Статичный расход</option>
+                    <option value="CalcBounds">Связанные ТУ</option>
+                    <option value="CalcComman">Простой</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="location">Место установки</label>
+                <input type="text" id="location" asp-for="Location" required />
+            </div>
+            <div class="add-btns">
+                <button class="button-17" id="btn-add-nomdog">Добавить точку учета</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+

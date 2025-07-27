@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new meter</title>
+    <link rel="stylesheet" href="../../stylesheet.css">
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="../../index.html">На главную</a></li>
+        </nav>
+    </header>
+    <main>
+        <div class="input-container">
+            <form action="">
+                <div class="inputs">
+                    <label for="nom-meter">Номер счетчика</label>
+                    <input type="text" id="nom-dog" required />
+                </div>
+                <div class="inputs">
+                    <label for="commissioning-date">Дата ввода в эксплуатацию</label>
+                    <input type="date" id="commissioning-date" name="" required />
+                </div>
+                <div class="inputs">
+                    <label for="type-meter">Вид счетчика</label>
+                    <input type="text" id="typeAR-meter" name="" list="typeAR-meter-list" required />
+                    <datalist id="typeAR-meter-list">
+                        <option value="Активный"></option>
+                        <option value="Реактивный"></option>
+                    </datalist>
+                </div>
+                <div class="inputs">
+                    <label for="type-meter">Тип счетчика</label>
+                    <input type="text" id="type-meter" name="" list="type-meter-list" required />
+                    <datalist id="type-meter-list">
+                        <option value="Тип1"></option>
+                        <option value="Тип2"></option>
+                    </datalist>
+                </div>
+                <div class="add-btns">
+                    <button class="button-17">Добавить показания</button>
+                    <button class="button-17" id="btn-add-abn">Добавить счетчик</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

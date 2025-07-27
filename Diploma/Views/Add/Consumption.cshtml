@@ -1,0 +1,34 @@
+@model Diploma.Models.ViewModels.Add.ConsumptionAddView
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="AddConsumption" asp-controller="Add">
+                <div class="inputs">
+                    <label for="SelectedPointId">Номер точки учета</label>
+                    <select required asp-for="SelectedPointId" class="select-css" asp-items="Model.Points">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="nom-month">Месяц</label>
+                    <input type="number" id="nom-month" asp-for="Month" required  min="1" max="12"/>
+                </div>
+                <div class="inputs">
+                    <label for="read">Расход</label>
+                    <input type="number" id="read" asp-for="Consumption" required min="0" step="any" />
+                </div>
+                <div class="inputs">
+                    <label for="Consumption-date">Дата расхода</label>
+                    <input type="date" id="Consumption-date" required asp-for="ConsumptionDate" />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Добавить расход</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+

@@ -1,0 +1,40 @@
+@model Diploma.Models.ViewModels.Add.MountMeterAddView
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="SetMeter" asp-controller="Add">
+                <div class="inputs">
+                    <label for="Type">Вид счетчика</label>
+                    <select required class="select-css" asp-for="Type">
+                        <option value="">Выберите тип</option>
+                        <option value="true">Активный</option>
+                        <option value="false">Реактивный</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="SelectedMeterId">Номер счетчика</label>
+                    <select required asp-for="SelectedMeterId" class="select-css" asp-items="Model.Meters">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="SelectedPointId">Номер точки</label>
+                    <select required asp-for="SelectedUnitsId" class="select-css" asp-items="Model.Units">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="set-date">Дата установления</label>
+                    <input type="date" id="set-date" required asp-for="SetDate" />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Установить счетчик</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+

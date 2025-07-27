@@ -1,0 +1,64 @@
+
+@model Diploma.Models.ViewModels.Delete.DeleteView
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="DeleteObjects" asp-controller="Delete">
+                <div class="inputs">
+                    <label for="object-list">Выбирете объект</label>
+                    <select  class="select-css" id="object-list">
+                        <option value="">Выберите объект</option>
+                        <option value="nomdog">Удалить договор</option>
+                        <option value="nomabn">Удалить абонент</option>
+                        <option value="nomtu">Удалить точку учета</option>
+                        <option value="nomue">Удалить учетнуя единицу</option>
+                        <option value="nomcalc">Удалить установленный счетчик</option>
+                        <option value="nomtrans">Удалить установленный транфсорматор</option>
+                    </select>
+                </div>
+                <div class="inputs hide" id="nomdog">
+                    <label for="SelectedContractId">Номер договор</label>
+                    <select class="select-css" asp-for="SelectedContractId" asp-items="Model.ContractNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs hide" id="nomabn">
+                    <label for="SelectedAbonentId">Номер абонент</label>
+                    <select class="select-css" asp-for="SelectedAbonentId" asp-items="Model.AbonentNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs hide" id="nomtu">
+                    <label for="SelectedPointId">Номер точки учета</label>
+                    <select class="select-css" asp-for="SelectedPointId" asp-items="Model.PointNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs hide" id="nomue">
+                    <label for="SelectedUnitId">Номер учетной единицы</label>
+                    <select class="select-css" asp-for="SelectedUnitId" asp-items="Model.UnitNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs hide" id="nomcalc">
+                    <label for="SelectedMountMetersId">Номер счетчика</label>
+                    <select class="select-css" asp-for="SelectedMountMetersId" asp-items="Model.MountMetersNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs hide" id="nomtrans">
+                    <label for="SelectedMountTransformerId">Номер транфсорматора</label>
+                    <select class="select-css" asp-for="SelectedMountTransformerId" asp-items="Model.MountTransformerNumbers">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Удалить</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+</body>

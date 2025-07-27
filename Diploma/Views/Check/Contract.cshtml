@@ -1,0 +1,41 @@
+
+<body>
+
+    <main>
+        <div class="input-container">
+            <form action="">
+                <div class="inputs">
+                    <label for="nom-dog">Номер договора</label>
+                    <input type="number" id="nom-dog" required list="nom-dog-list" />
+                    <datalist id="nom-dog-list">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                    </datalist>
+                </div>
+                <div class="table-btns" id="find-btn">
+                    <button class="button-17" id="btn-sort-number">Сортировка по номеру</button>
+                    <button class="button-17" id="btn-sort-date">Сортировка по дате</button>
+                    <button class="button-17" id="btn-find">Найти </button>
+                </div>
+
+            </form>
+        </div>
+        <div class="table-container">
+            <table id="table-abn">
+                <thead>
+                    <tr>
+                        <th>ФИО плательщика</th>
+                        <th>Номер договора</th>
+                        <th>Название организации</th>
+                        <th>Дата заключения</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+<script src="../../data/abonent.js"></script>
+

@@ -1,0 +1,39 @@
+@model Diploma.Models.ViewModels.Add.TransformerAddView
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="CreateTransformer" asp-controller="Add">
+                <div class="inputs">
+                    <label for="nom-trans">Номер транформатора</label>
+                    <input type="text" id="nom-trans" required   asp-for="Name"/>
+                </div>
+                <div class="inputs">
+                    <label for="type-trans">Тип транформатора</label>
+                    <select id="type-trans" required asp-for="Type" class="select-css">
+                        <option value="">Выберите тип</option>
+                        <option value="true">Транформатор тока</option>
+                        <option value="false">Транформатор напряжения</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="address-trans">Номер транформатора</label>
+                    <input type="text" id="nom-address" required asp-for="Address" />
+                </div>
+                <div class="inputs">
+                    <label for="coef-trans">Коэффициент трансформации </label>
+                    <input type="number" id="coef-trans" required asp-for="Сoefficient" />
+                </div>
+                <div class="inputs">
+                    <label for="conclusion-date">Дата установки</label>
+                    <input type="date" id="conclusion-date" required asp-for="СommissioningDate" />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Добавить транформатор</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+</body>
+

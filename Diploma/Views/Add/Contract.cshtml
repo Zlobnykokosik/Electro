@@ -1,0 +1,30 @@
+@using Diploma.Models.Add
+@model ContractAdd
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="CreateContract" asp-controller="Add" method="post">
+                <div class="inputs">
+                    <label for="platel-name">ФИО плательщика</label>
+                    <input type="text" id="platel-name"  asp-for="FIO" required />
+                </div>
+                <div class="inputs">
+                    <label for="nom-dog">Номер договора</label>
+                    <input type="number" id="nom-dog"  asp-for="ContractNumber" required />
+                </div>
+                <div class="inputs">
+                    <label for="address">Название организации</label>
+                    <input type="text" id="address"  asp-for="Address" required />
+                </div>
+                <div class="inputs">
+                    <label for="conclusion-date">Дата заключения</label>
+                    <input type="date" id="conclusion-date"  asp-for="ConclusionDate" required />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-nomdog">Добавить договор</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>

@@ -1,0 +1,34 @@
+@model Diploma.Models.ViewModels.Add.ReadingAddView
+<body>
+    <main>
+        <div class="input-container">
+            <form asp-action="AddReading" asp-controller="Add">
+                <div class="inputs">
+                    <label for="SelectedMeterId">Номер счетчика</label>
+                    <select required asp-for="SelectedMeterId" class="select-css" asp-items="Model.MountMeters">
+                        <option value="">Выберите номер</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="nom-month">Месяц</label>
+                    <input type="number" id="nom-month" asp-for="Month" required  min="1" max="12"/>
+                </div>
+                <div class="inputs">
+                    <label for="read">Показание</label>
+                    <input type="number" id="read" asp-for="Reading" required min="0" step="any" />
+                </div>
+                <div class="inputs">
+                    <label for="commissioning-date">Дата показания</label>
+                    <input type="date" id="commissioning-date" required asp-for="ReadingDate" />
+                </div>
+                <div class="add-btns">
+                    <button class="button-17" id="btn-add-abn">Добавить показание</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+
